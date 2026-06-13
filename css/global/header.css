@@ -1,23 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
 
 .header-bg {
-  background-color: #000;
+  background-color: var(--cor-12);
 }
 
 .header {
@@ -26,9 +9,7 @@ a {
   gap: 20px;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  max-width: 1280px;
-  margin: 0 auto;
+  padding: 20px 0;
 }
 
 .header-menu {
@@ -39,17 +20,15 @@ a {
 .header-menu a {
   display: inline-block;
   padding: 16px 0;
-  color: #fff;
-  font-size: 18px;
   position: relative;
 }
 
 .header-menu a::after {
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   width: 0px;
-  background-color: #fff;
+  background-color: var(--cor-0);
   margin-top: 4px;
   transition: 0.3s;
   position: absolute; /*para que ele pare de ser considerado e não desalinhe os itens alinhados com o aling items*/
@@ -59,28 +38,27 @@ a {
   width: 100%;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
   .header-menu {
     gap: 20px;
   }
 
   .header-menu a {
-    background-color: #111;
+    background-color: var(--cor-11);
     padding: 12px 16px;
     border-radius: 4px;
   }
 
-  .header-menu a:hover{
-    background-color: #2e2e2e;
+  .header-menu a:hover {
+    background-color: var(--cor-10);
   }
 
-  .header-menu a::after{
+  .header-menu a::after {
     display: none;
   }
-
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   .header-menu {
     gap: 12px;
   }
@@ -89,5 +67,4 @@ a {
     padding: 8px 12px;
     font-size: 14px;
   }
-  
 }
